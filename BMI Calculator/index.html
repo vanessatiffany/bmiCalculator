@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="./assets/calculator.ico">
+    <title>BMI</title>
+</head>
+
+<body>
+    <header>
+        <h1>Kalkulator BMI </h1>
+        <quote>Berat badan ideal adalah impian semua orang. <br>
+            Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. <br>
+            Bagaimana denganmu? Yuk, hitung sekarang di BMI Calculator.</quote>
+    </header>
+
+    <main class="container">
+        <section class="unit">
+            <div id="us btn-us">US - unit</div>
+            <div id="si btn-si">SI - unit</div>
+        </section>
+        <form class="form" id="form" onsubmit="return validateForm()">
+            <div class="gender">
+                <quote>Jenis Kelamin</quote><br>
+                <input type="radio" id="cowok" name="cowok">
+                <label for="cowok">Pria</label>
+                <input type="radio" id="cewek" name="cewek">
+                <label for="cewek">Wanita</label><br>
+            </div>
+            
+            <div class="umur">
+                <label for="umur">Usia</label>
+                <input type="text" id="umur" name="umur"><br>
+            </div>
+
+            <div class="tinggi">
+                <label for="tinggiBadan">Tinggi Badan <span>(cm):</span></label>
+                <input type="text" id="tinggiBadan" name="tinggiBadan"><br>
+            </div>
+
+            <div class="berat">
+                <label for="beratBadan">Berat Badan <span>(kg):</span></label>
+                <input type="text" id="beratBadan" name="beratBadan"><br>
+            </div>
+
+            <div class="btn">
+                <button type="button" id="btn-cal">Calculate BMI</button>
+                <button type="button" id="btn-clr">Clear</button>
+            </div>
+
+        </form>
+    </main>
+    <section class="table">
+        <div class="result" id="answer">
+            <h3><em>Hasil</em></h3>
+            <!--<h3>BMI = 12</h3>
+            <h3>PI = 12</h3>-->
+
+        </div>
+        <div class="index" id="slider">
+            <span id="i">0</span><span style="font-size: 12px;"></span>
+            <img src="./assets/triangledown.png" />
+        </div>
+        <div class="ruler"></div>
+        <div class="infor" id="status">
+            <quote>Keunggulan fitur</quote>
+            <ul>
+                <li>Menghitung berat badan</li>
+                <li>Menentukan kategori berat ideal atau tidak</li>
+                <li>Mempersiapkan program penurunan berat badan</li>
+            </ul>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
